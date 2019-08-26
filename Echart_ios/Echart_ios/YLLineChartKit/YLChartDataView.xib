@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YLChartDataView">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-oF-xj4">
+                    <rect key="frame" x="0.0" y="0.0" width="457" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-VZ-ZJt">
+                            <rect key="frame" x="159.66666666666666" y="20" width="46" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="近30日">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="receentDayClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YbV-ms-9sW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkl-8r-2Xx">
+                            <rect key="frame" x="252.66666666666663" y="20" width="43" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="近一年">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="receebtyearClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="KzP-ev-VlX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NWK-Y7-LXv"/>
+                        <constraint firstItem="Nkl-8r-2Xx" firstAttribute="centerX" secondItem="d4b-oF-xj4" secondAttribute="centerX" multiplier="1.2" id="Od2-NH-lvu"/>
+                        <constraint firstItem="Nkl-8r-2Xx" firstAttribute="top" secondItem="d4b-oF-xj4" secondAttribute="top" constant="20" id="Ovl-DK-NoI"/>
+                        <constraint firstItem="Q1G-VZ-ZJt" firstAttribute="centerX" secondItem="d4b-oF-xj4" secondAttribute="centerX" multiplier="0.8" id="cJD-sJ-dnV"/>
+                        <constraint firstItem="Q1G-VZ-ZJt" firstAttribute="top" secondItem="d4b-oF-xj4" secondAttribute="top" constant="20" id="e9H-I7-b1G"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIx-Va-QlC">
+                    <rect key="frame" x="0.0" y="55" width="457" height="295"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34e-re-NDX">
+                            <rect key="frame" x="198" y="138.66666666666666" width="61.333333333333314" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="34e-re-NDX" firstAttribute="centerX" secondItem="SIx-Va-QlC" secondAttribute="centerX" id="2WO-7q-5IJ"/>
+                        <constraint firstItem="34e-re-NDX" firstAttribute="centerY" secondItem="SIx-Va-QlC" secondAttribute="centerY" id="Ljb-xV-ZfJ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（价格/元）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-gp-MIp">
+                    <rect key="frame" x="387" y="50" width="60" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vOd-gp-MIp" firstAttribute="top" secondItem="d4b-oF-xj4" secondAttribute="bottom" id="4wA-FV-KMR"/>
+                <constraint firstItem="SIx-Va-QlC" firstAttribute="top" secondItem="d4b-oF-xj4" secondAttribute="bottom" constant="5" id="BwI-Q2-Pef"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d4b-oF-xj4" secondAttribute="trailing" id="I2X-Hf-qRz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SIx-Va-QlC" secondAttribute="trailing" id="NzJ-2H-fum"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SIx-Va-QlC" secondAttribute="bottom" id="ics-Ku-A4b"/>
+                <constraint firstItem="d4b-oF-xj4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kXX-9g-9Cw"/>
+                <constraint firstItem="d4b-oF-xj4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="m4H-dK-uVk"/>
+                <constraint firstItem="SIx-Va-QlC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wN0-wf-urr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vOd-gp-MIp" secondAttribute="trailing" constant="10" id="x8i-TV-avS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="biaoshiLable" destination="vOd-gp-MIp" id="52l-Tr-Kjs"/>
+                <outlet property="chartInfoBackView" destination="SIx-Va-QlC" id="uFQ-NA-2gE"/>
+                <outlet property="reccentDayBtn" destination="Q1G-VZ-ZJt" id="kNy-LA-BQM"/>
+                <outlet property="renceentYearBtn" destination="Nkl-8r-2Xx" id="Skg-GZ-vEI"/>
+            </connections>
+            <point key="canvasLocation" x="-279" y="-32"/>
+        </view>
+    </objects>
+</document>
